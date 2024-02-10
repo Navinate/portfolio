@@ -1,19 +1,29 @@
 <script>
   import { T } from '@threlte/core'
   import { ContactShadows, Float, Grid, OrbitControls } from '@threlte/extras'
+  import { interactivity } from '@threlte/extras'
+  import { spring } from 'svelte/motion'
+
+  interactivity()
+  const scale1 = spring(1)
+  const scale2 = spring(1)
+  const scale3 = spring(1)
+  const scale4 = spring(1)
+  const scale5 = spring(1)
 </script>
 
 <T.PerspectiveCamera
   makeDefault
-  position={[-10, 10, 10]}
+  position={[-15, 15, 15]}
   fov={15}
 >
   <OrbitControls
     autoRotate
-    enableZoom={false}
+    enableZoom={true}
+    minZoom={0.5}
+    maxZoom={1}
     enableDamping
     autoRotateSpeed={0.5}
-    target.y={1.5}
   />
 </T.PerspectiveCamera>
 
@@ -22,7 +32,7 @@
   position.x={5}
   position.y={10}
 />
-<T.AmbientLight intensity={0.2} />
+<T.AmbientLight intensity={0.5} />
 
 <Grid
   position.y={-0.001}
@@ -42,40 +52,30 @@
 
 <Float
   floatIntensity={1}
-  floatingRange={[0, 1]}
->
-  <T.Mesh
-    position.y={1.2}
-    position.z={-0.75}
+  floatingRange={[-0.5, 0.5]}
   >
-    <T.BoxGeometry />
-    <T.MeshStandardMaterial color="#0059BA" />
-  </T.Mesh>
+    <T.Mesh
+      position.x={0}
+      position.y={0}
+      position.z={0}
+      scale={$scale1}
+      on:pointerenter={() => scale1.set(1.1)}
+      on:pointerleave={() => scale1.set(1)}
+      on:click={() => { 
+        scale1.set(1);
+        window.open('https://google.com');
+      }}
+    >
+      <T.SphereGeometry />
+      <T.MeshPhysicalMaterial
+      color="#66CED6"
+      opacity={0.3}
+      transparent
+      clearcoat={1}
+      />
+    </T.Mesh>
+    <T.Mesh>
+      <T.PlaneGeometry />
+    </T.Mesh>
 </Float>
 
-<Float
-  floatIntensity={1}
-  floatingRange={[0, 1]}
->
-  <T.Mesh
-    position={[1.2, 1.5, 0.75]}
-    rotation.x={5}
-    rotation.y={71}
-  >
-    <T.TorusKnotGeometry args={[0.5, 0.15, 100, 12, 2, 3]} />
-    <T.MeshStandardMaterial color="#F85122" />
-  </T.Mesh>
-</Float>
-
-<Float
-  floatIntensity={1}
-  floatingRange={[0, 1]}
->
-  <T.Mesh
-    position={[-1.4, 1.5, 0.75]}
-    rotation={[-5, 128, 10]}
-  >
-    <T.IcosahedronGeometry />
-    <T.MeshStandardMaterial color="#F8EBCE" />
-  </T.Mesh>
-</Float>
