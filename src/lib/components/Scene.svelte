@@ -6,6 +6,7 @@
   import Orb from './Orb.svelte'
 
   const positions = [[-2, 0, -2], [-2, 0, 2], [2, 0, -2], [2, 0, 2]]
+  const words = ['Trey', 'Orb', 'Portfolio', 'StairWELL']
 </script>
 
 <Stars />
@@ -29,7 +30,7 @@
 />
 <T.AmbientLight intensity={1} />
 
-{#each positions as position}
-  <Orb position={position}/>
+{#each positions as position, i}
+  <Orb position={position} text={words[i]}/>
 {/each}
 
