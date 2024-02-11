@@ -8,7 +8,7 @@
     export let color = '#2A9D8F';
     export let position = [0,0,0];
     export let text = 'Orb';
-    export let fontSize = 1;
+    export let fontSize = 0.5;
 
     const scale = spring(1);
     interactivity();
@@ -52,7 +52,7 @@
     >
         <Text
             {text}
-            color="white"
+            color="#e9c46a"
             {fontSize}
             anchorX="50%"
             anchorY="50%"
