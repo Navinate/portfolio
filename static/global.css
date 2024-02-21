@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Amiamie', sans-serif;
+  src: url('./fonts/Amiamie-Regular.ttf') format('ttf'),
+}
+@font-face {
+    font-family: 'Fredokaone', monospace;
+    src: url('.fonts/fredokaone.ttf') format('ttf'),
+}
+
+:root {
+  --background-color: #0c111d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Amiamie', sans-serif;
+  background-color: var(--background-color);
+}
+h1 {
+  font-family: 'Fredokaone', serif;
+}
+

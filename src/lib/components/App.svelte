@@ -1,8 +1,13 @@
 <script>
   import { Canvas } from '@threlte/core'
-  import Scene from './Scene.svelte'
+	import DesktopScene from './DesktopScene.svelte';
+	import MobileScene from './MobileScene.svelte';
 </script>
 
 <Canvas>
-  <Scene />
+  {#if window.screen.width > 720}
+    <DesktopScene />
+  {:else}
+    <MobileScene />
+  {/if}
 </Canvas>
