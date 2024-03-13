@@ -1,5 +1,8 @@
+<svelte:head>
+    <title>About Me</title>
+</svelte:head>
 <h1>About</h1>
-<h4>Hello! My name is Trey and I am an immersive developer.  I specialize in interactive art, games, and anything involving coding and fun!</h4>
+<h4>My name is Trey and I am an immersive developer.  I specialize in interactive art, games, and anything involving coding and fun!</h4>
 <a href="https://forms.gle/J2jR1y4Gc3QRqi8m8">Resume Request Form</a>
 <div>
     <h3>Skills</h3>

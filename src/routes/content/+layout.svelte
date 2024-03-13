@@ -1,18 +1,33 @@
 <script>
 	import { Canvas } from "@threlte/core";
     import HeaderScene from "$lib/components/HeaderScene.svelte";
+	import MobileHeaderScene from "$lib/components/MobileHeaderScene.svelte";
+	import { onMount } from "svelte";
+
+    let windowWidth = 0;
+    onMount(()=> {
+        windowWidth = window.screen.width;
+    
+    })
 </script>
-<svelte:head>
-    <title>About Me</title>
-</svelte:head>
 
 <main>
+
     <header>
-        <Canvas
-            size={{width: 900, height:300}}
-        >
-            <HeaderScene />
-        </Canvas>
+        {#if windowWidth > 720}
+            <Canvas
+                size={{width: 900, height:300}}
+            >
+                <HeaderScene />
+            </Canvas>
+        {:else}
+            <Canvas
+                size={{width: windowWidth, height:200}}
+            >
+                <MobileHeaderScene />
+            </Canvas>
+        {/if}
+        
     </header>
     <slot></slot>
 </main>
