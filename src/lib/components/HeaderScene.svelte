@@ -40,6 +40,11 @@
         fontSize={1}
         anchorX="50%"
         anchorY="50%"
+
+        on:click={() => {
+          alert("You clicked the title!");
+          window.location.href = "/";
+        }}
     />
 </Float>
 

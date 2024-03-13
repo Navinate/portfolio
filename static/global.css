@@ -9,6 +9,12 @@
 
 :root {
   --background-color: #0c111d;
+  --accent-one: #7CB518;
+  --accent-two: #8231C4;
+  --accent-three: #009DDC;
+  --accent-four: #EC0B43;
+  --accent-five: #264653;
+  --accent-six: #239DAF;
 }
 
 * {
