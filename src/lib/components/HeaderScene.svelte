@@ -5,26 +5,38 @@
     import { T } from '@threlte/core'
     import {words, links, colors} from '../data.js'
     import Orb from "./Orb.svelte";
-    const positions = [[0,1,0],[1.5,-1,0],[3,1,0],[4.5,-1,0],[6,1,0],[7.5,-1,0]];
+    const positions = [[0,0.8,0],[1.5,-0.8,0],[3,0.8,0],[4.5,-0.8,0],[6,0.8,0],[7.5,-0.8,0]];
 
 </script>
 
-<T.OrthographicCamera makeDefault position={[0, 0, 10]} zoom={50} />
-<T.DirectionalLight
-  intensity={5}
-  position.x={-5}
-  position.y={-10}
-/>
+<T.OrthographicCamera makeDefault position={[0, 0, 1]} zoom={50} />
+
+  <T.DirectionalLight
+    intensity={3}
+    position.x={-5}
+    position.y={-10}
+  />
+<!-- <Float
+  floatIntensity={5}
+  floatingRange={[-5, 5]}>
+  <T.DirectionalLight
+    intensity={5}
+    position.x={5}
+    position.y={10}
+    position.z={5}
+    color="#FF0000"
+  />
+</Float> -->
 <T.AmbientLight intensity={1} />
 <Float
     floatIntensity={1}
-    floatingRange={[-0.5, 0.5]}
+    floatingRange={[-0.2, 0.2]}
 >
     <Text
         position={[-5, 0, 0]}
         renderOrder={-5}
         text="Trey's Noise"
-        color="#009DDC"
+        color="#d42035"
         textAlign="center"
         font="/fonts/fredokaone.ttf"
 
@@ -49,6 +61,6 @@
 </Float>
 
 {#each positions as position, i}
-  <Orb position={position} text={words[i]} targetURL={links[i].replace("/content", "")} color={colors[i]} floatAmp={0.5} opacity={0.9}/>
+  <Orb position={position} text={words[i]} targetURL={links[i].replace("/content", "")} color={colors[i]} floatAmp={0.5} floatRange={0.2} opacity={0.9}/>
 {/each}
 

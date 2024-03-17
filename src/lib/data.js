@@ -1,5 +1,5 @@
-const words =     ['About Me',          'Shaders',           'Web Apps',          'StairWELL',           'School\nProjects',     'Personal\nArt'];
-const links =     ['./content/about',   './content/shaders', './content/webapps', './content/stairwell', './content/schoolwork', './content/art'];
-const colors =    ['#7CB518',           '#8231C4',           '#009DDC',           '#EC0B43',             '#264653',              '#239DAF'];
+const words =     ['About',          'Games\n(itch.io)',           'Web Apps',          'StairWELL\n(my thesis)',           'School\nProjects',     'Random Art\n(twitter)'];
+const links =     ['./content/about',   'https://navinate.itch.io/', './content/webapps', 'https://convocations.purdue.edu/stairwell/', './content/schoolwork', 'https://twitter.com/treysnoise/media'];
+const colors =    ['#d42035',           '#22fcbe',           '#232d47',           '#d42035',             '#22fcbe',              '#232d47'];
 
 export { words, links, colors };

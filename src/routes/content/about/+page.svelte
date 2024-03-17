@@ -37,7 +37,7 @@
     </ul>
 </div>
 <div>
-    <h3>Jobs</h3>
+    <h3>Experience</h3>
     <ul class="vertical">
         <li><span>Freelance</span> web and immersive developer: created websites and web apps for small businesses and academic departments</li>
         <li><span>Graduate</span> Research Assistant: creating interfaces with svelte and typescript for LLM backends</li>
@@ -56,23 +56,22 @@
         font-size: 3rem;
         font-family: 'Fredokaone', monospace;
         line-height: 5rem;
-        color: var(--accent-one);
+        color: var(--teal);
     }
     h3 {
         font-size: 2rem;
-        color: var(--accent-two);
+        color: var(--teal);
         margin-top: 2rem;
     }
     h4 {
         font-size: 1.5rem;
-        color: var(--accent-three);
     }
 
     a {
         margin-top: 1.5rem;
         font-size: 1.5rem;
         text-decoration: none;
-        background-color: var(--accent-six);
+        background-color: var(--red);
         color: white;
         padding: 0.5rem 1rem;
         border-radius: 0.5rem;
@@ -101,22 +100,13 @@
         cursor: default;
     }
     .sideways li:nth-child(n) {
-        background-color: var(--accent-one);
+        background-color: var(--blue);
     }
     .sideways li:nth-child(2n) {
-        background-color: var(--accent-two);
+        background-color: var(--blue);
     }
     .sideways li:nth-child(3n) {
-        background-color: var(--accent-three);
-    }
-    .sideways li:nth-child(4n) {
-        background-color: var(--accent-four);
-    }
-    .sideways li:nth-child(5n) {
-        background-color: var(--accent-five);
-    }
-    .sideways li:nth-child(6n) {
-        background-color: var(--accent-six);
+        background-color: var(--blue);
     }
 
 
@@ -128,27 +118,12 @@
         font-size: 1.5rem;
     }
 
-    .vertical li:nth-child(n)::marker {
-        color: var(--accent-one);
+    .vertical li::marker {
+        color: var(--red);
+    
     }
-    .vertical li:nth-child(2n)::marker {
-        color: var(--accent-two);
+     span {
+        color: var(--teal);
     }
-    .vertical li:nth-child(3n)::marker {
-        color: var(--accent-three);
-    }
-    .vertical li:nth-child(4n)::marker {
-        color: var(--accent-four);
-    }
-    .vertical li:nth-child(5n)::marker {
-        color: var(--accent-five);
-    }
-    .vertical li:nth-child(6n)::marker {
-        color: var(--accent-six);
-    }
-
-    /* .vertical li span {
-        color: var(--accent-four);
-    } */
 
 </style>

@@ -8,14 +8,12 @@
 }
 
 :root {
-  --background-color: #0c111d;
-  --accent-one: #7CB518;
-  --accent-two: #8231C4;
-  --accent-three: #009DDC;
-  --accent-four: #EC0B43;
-  --accent-five: #264653;
-  --accent-six: #239DAF;
+  --background-color: #232D47;
+  --red: #d42035;
+  --teal: #22fcbe;
+  --blue: #7974d1;
 }
+
 
 * {
   margin: 0;
@@ -25,7 +23,9 @@
 
 body {
   font-family: 'Amiamie', sans-serif;
-  background-color: var(--background-color);
+  background: var(--background-color);
+  background: linear-gradient(45deg, #232D47 0%, #7974d1 100%);
+  /* background-image: url("/images/grain.png"); */
 }
 h1 {
   font-family: 'Fredokaone', serif;

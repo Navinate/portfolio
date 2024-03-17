@@ -3,8 +3,6 @@
 
 	import { Float, Text } from "@threlte/extras";
     import { T } from '@threlte/core'
-    import {words, links, colors} from '../data.js'
-    import Orb from "./Orb.svelte";
 </script>
 
 <T.OrthographicCamera makeDefault position={[0, 0, 10]} zoom={50} />
@@ -16,10 +14,10 @@
 <T.AmbientLight intensity={1} />
 <Float
     floatIntensity={1}
-    floatingRange={[-0.5, 0.5]}
+    floatingRange={[-0.2, 0.2]}
 >
     <Text
-        position={[-5, 0, 0]}
+        position={[0, 0, 0]}
         renderOrder={-5}
         text="Trey's Noise"
         color="#009DDC"

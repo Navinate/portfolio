@@ -16,13 +16,13 @@
     <header>
         {#if windowWidth > 720}
             <Canvas
-                size={{width: 900, height:300}}
+                size={{width: 900, height:200}}
             >
                 <HeaderScene />
             </Canvas>
         {:else}
             <Canvas
-                size={{width: windowWidth, height:200}}
+                size={{width: windowWidth, height:100}}
             >
                 <MobileHeaderScene />
             </Canvas>
@@ -40,8 +40,8 @@
         max-width: 1080px;
         margin: 0 auto;
         padding: 2rem;
-        background-color: #0c111d;
         color: white;
+        
     }
     header {
         display: flex;
@@ -53,8 +53,8 @@
     footer {
         margin-top: 4rem;
         padding: 2rem;
-        background-color: var(--accent-six);
-        background-image: linear-gradient(45deg, var(--accent-one), var(--accent-six));
+        background-color: var(--red);
+        background-image: linear-gradient(45deg, var(--blue), var(--red));
         color: white;
         text-align: center;
         font-size: 1.5rem;

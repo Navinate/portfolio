@@ -5,18 +5,19 @@
 	import { spring } from 'svelte/motion'
 
   //T.BackSide just isnt working for some reason so I have to import it manually
-  import { BackSide } from 'three';
+  import { BackSide, FrontSide } from 'three';
 
 
 
-    export let targetURL = 'https://google.com';
+    export let targetURL = '/';
     export let radius = 1;
     export let color = '#2A9D8F';
     export let position = [0,0,0];
     export let text = 'Orb';
     export let floatAmp = 1;
+    export let floatRange = 0.5
     export let opacity = 0.5;
-    let fontSize = 5 / text.length * (text.includes("\n") ? 1 : 0.5);
+    let fontSize = 5 / text.length * (text.includes("\n") ? 1.2 : 0.5);
 
     const scale = spring(radius);
     interactivity();
@@ -56,7 +57,7 @@
 
 <Float
   floatIntensity={floatAmp}
-  floatingRange={[-0.5, 0.5]}
+  floatingRange={[-floatRange, floatRange]}
   >
     <T.Mesh
       renderOrder={0}
@@ -73,15 +74,6 @@
       renderOrder={1}
       />
       <T.MeshPhysicalMaterial
-      clearcoat={0.5}
-      emmisiveIntensity={1}
-      emmisive={color}
-      roughness={0.2}
-      metalness={0.2}
-      reflectivity={1}
-      iridescence={1}
-      iridescenceIOR={2.333}
-      sheen={1}
       color={color}
       opacity={opacity}
       transparent={true}
@@ -94,7 +86,7 @@
         <Text
           renderOrder={-5}
             {text}
-            color={invertColor(color)}
+            color={"#FFFFFF"}
             textAlign="center"
             font="/fonts/fredokaone.ttf"
 
@@ -102,11 +94,6 @@
             gpuAccelerateSDF={true}
             letterSpacing={0.02}
             lineHeight={1.2}
-            outlineColor="#8231C4"
-            outlineOffsetX={0.02}
-            outlineOffsetY={0.02}
-            outlineOpacity={0.5}
-            outlineWidth={0.01}
 
             {fontSize}
             anchorX="50%"
