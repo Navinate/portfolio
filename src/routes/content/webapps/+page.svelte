@@ -9,11 +9,7 @@
 		<a href="https://www.vercel.com"><li>Vercel Hosted</li></a>
 	</ul>
 	<a href="https://albers.navinate.com">
-		<img
-			src="/images/albers.png"
-			width="560"
-			alt="Screenshot of my color guessing game: Albers' Challenge"
-		/>
+		<img src="/images/albers.png" alt="Screenshot of my color guessing game: Albers' Challenge" />
 	</a>
 	<p>
 		A fun little game I made while @ <a href="https://www.purduehackers.com/">Purdue Hackers</a>
@@ -31,7 +27,7 @@
 		<a href="https://www.vercel.com"><li>Vercel Hosted</li></a>
 	</ul>
 	<a href="https://stratagem-emoji.vercel.app/">
-		<img src="/images/stratagem.png" width="560" alt="Screenshot of my Stratagem code tool" />
+		<img src="/images/stratagem.png" alt="Screenshot of my Stratagem code tool" />
 	</a>
 	<p>
 		Small web app I made to quickly convert WASD / Arrow key inputs into emojis. Inspired by the
@@ -103,9 +99,23 @@
 		cursor: pointer;
 		background-color: var(--background-color);
 	}
-
-	iframe {
-		border-radius: 0.5rem;
+	img {
+		border-radius: 1rem;
 		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+		width: 80vw;
+		max-width: 560px;
+	}
+
+	@media (max-width: 720px) {
+		h1 {
+			font-size: 2rem;
+		}
+		h3 {
+			font-size: 1.5rem;
+		}
+		h1,
+		h3 {
+			line-height: 1rem;
+		}
 	}
 </style>
