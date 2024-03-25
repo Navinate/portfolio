@@ -1,4 +1,6 @@
 <script>
+	// @ts-nocheck
+
 	import { T } from '@threlte/core';
 	import { OrbitControls } from '@threlte/extras';
 	import { Stars } from '@threlte/extras';
@@ -6,12 +8,12 @@
 	import Orb from './Orb.svelte';
 
 	const positions = [
-		[-3, 0, -3],
-		[-3, 1, 3],
-		[3, -1, -3],
-		[2, 0, 3],
-		[4, 2, -1],
-		[1, 3, 4]
+		[-5, -2, -3],
+		[-3, 0, 4],
+		[3, -4, -3],
+		[2, -1, 3],
+		[4, 1, -1],
+		[1, 2, 5]
 	];
 
 	let zoom = window.screen.width > 1280 ? 0.5 : 0.2;
@@ -34,7 +36,15 @@
 
 <Stars />
 
-<T.PerspectiveCamera makeDefault position={[20, 0, 0]} fov={15} {zoom}>
+<T.PerspectiveCamera
+	makeDefault
+	position={[15, 0, 0]}
+	fov={30}
+	{zoom}
+	on:create={({ ref }) => {
+		ref.lookAt(-50, 50, 10);
+	}}
+>
 	<OrbitControls autoRotate enableZoom={false} enableDamping autoRotateSpeed={0.5} />
 </T.PerspectiveCamera>
 
