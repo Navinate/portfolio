@@ -30,8 +30,11 @@
 		<img src="/images/stratagem.png" alt="Screenshot of my Stratagem code tool" />
 	</a>
 	<p>
-		Small web app I made to quickly convert WASD / Arrow key inputs into emojis. Inspired by the
-		amazing game Helldivers 2. <a href="https://stratagem-emoji.vercel.app/">Link</a> and
+		Small web app I made to quickly convert WASD / Arrow key inputs into emojis. It also features a
+		quiz mode to test your stratagem memorization. Inspired by the amazing game Helldivers 2. <a
+			href="https://stratagem-emoji.vercel.app/">Link</a
+		>
+		and
 		<a href="https://github.com/Navinate/stratagem-emoji">Source</a>
 	</p>
 </section>
